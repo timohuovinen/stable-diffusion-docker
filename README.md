@@ -3,13 +3,13 @@
 build image
 
 ```sh
-sudo docker build . -t sdui
+make build
 ```
 
 Run
 
 ```
-sudo docker run --gpus all --rm -it --network host -v ${PWD}/models:/var/home/th/stable-diffusion-webui/models/Stable-diffusion sdui bash
+make run
 ```
 
 Verify it works:
