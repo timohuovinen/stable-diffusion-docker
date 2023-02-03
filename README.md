@@ -1,24 +1,6 @@
-
-
-build image
-
 ```sh
-make build
+make up
 ```
-
-Run
-
-```
-make run
-```
-
-Verify it works:
-
-```sh
-cd stable-diffusion-webui/
-./webui.sh
-```
-
 
 
 other attempts:
