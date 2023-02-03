@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install python
 RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-venv python3-pip
 
+ENV PATH="/var/home/th/.local/bin:${PATH}"
 
 
 
@@ -130,13 +131,8 @@ RUN chown -R $USER_NAME:$GROUP_NAME $HOME
 # Change to the user.
 USER $USER_NAME
 
-# Install stable diffusion UI
-RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
-
+RUN mkdir -p $HOME/stable-diffusion-webui
 WORKDIR $HOME/stable-diffusion-webui
 
 RUN pip3 install torch==1.13.1+cu117 torchvision==0.14.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
-#RUN ./webui.sh
-
-ENV PATH="/var/home/th/.local/bin:${PATH}"
-
+RUN ./webui.sh || true
