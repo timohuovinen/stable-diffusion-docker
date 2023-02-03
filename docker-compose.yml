@@ -3,8 +3,9 @@ services:
   ui:
     build: .
     volumes:
-      - ./stable-diffusion-webui:/var/home/th/stable-diffusion-webui
-      - ./models:/var/home/th/stable-diffusion-webui/models/Stable-diffusion:ro
+      # - ./stable-diffusion-webui:/var/home/th/stable-diffusion-webui
+      - ./models:/var/home/th/stable-diffusion-webui/models/Stable-diffusion
+      - ./stable-diffusion-webui/webui-user.sh:/var/home/th/stable-diffusion-webui/webui-user.sh:ro
     working_dir: /var/home/th/stable-diffusion-webui
     command: ./webui.sh
     network_mode: host
