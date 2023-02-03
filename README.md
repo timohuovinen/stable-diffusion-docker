@@ -1,5 +1,7 @@
 ```sh
+make build
 make up
+make run
 ```
 
 

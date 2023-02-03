@@ -5,9 +5,9 @@ services:
     volumes:
       # - ./stable-diffusion-webui:/var/home/th/stable-diffusion-webui
       - ./models:/var/home/th/stable-diffusion-webui/models/Stable-diffusion
-      - ./stable-diffusion-webui/webui-user.sh:/var/home/th/stable-diffusion-webui/webui-user.sh:ro
+      - ./stable-diffusion-webui/webui-user.sh:/var/home/th/stable-diffusion-webui/webui-user.sh
     working_dir: /var/home/th/stable-diffusion-webui
-    command: ./webui.sh
+    # command: ./webui.sh
     network_mode: host
     deploy:
       resources:
