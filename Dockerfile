@@ -133,5 +133,5 @@ USER $USER_NAME
 
 RUN pip3 install torch==1.13.1+cu117 torchvision==0.14.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
 
-COPY stable-diffusion-webui/* $HOME/stable-diffusion-webui/
-RUN ./webui.sh || true
+RUN git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
+RUN (cd stable-diffusion-webui && ./webui.sh || true)

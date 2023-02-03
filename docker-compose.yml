@@ -3,7 +3,7 @@ services:
   ui:
     build: .
     volumes:
-      - ./stable-diffusion-webui:/var/home/th/stable-diffusion-webui:ro
+      - ./stable-diffusion-webui:/var/home/th/stable-diffusion-webui
       - ./models:/var/home/th/stable-diffusion-webui/models/Stable-diffusion:ro
     working_dir: /var/home/th/stable-diffusion-webui
     command: ./webui.sh
