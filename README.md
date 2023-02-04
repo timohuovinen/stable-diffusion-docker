@@ -2,6 +2,7 @@
 make build
 make up
 make run
+./webui.sh
 ```
 
 
