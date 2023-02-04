@@ -25,3 +25,4 @@ sources:
 * https://github.com/NVIDIA/nvidia-docker
 * https://towardsdatascience.com/how-to-properly-use-the-gpu-within-a-docker-container-4c699c78c6d1 
 * https://github.com/NVIDIA/nvidia-docker/issues/1711
+* https://nightcafe.studio/blogs/info/stable-diffusion-cuda-out-of-memory-how-to-fix
