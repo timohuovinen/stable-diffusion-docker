@@ -5,20 +5,6 @@ make run
 ./webui.sh
 ```
 
-
-other attempts:
-```
-sudo docker run -ti --device /dev/nvidia0:/dev/nvidia0 --device /dev/nvidiactl:/dev/nvidiactl --device /dev/nvidia-uvm:/dev/nvidia-uvm tleyden5iwx/ubuntu-cuda /bin/bash
-
-
-
-
-
-sudo docker run --rm --gpus all nvidia/cuda:11.8.0-base-ubuntu22.04 nvidia-smi
-```
-
-
-
 sources:
 * https://stackoverflow.com/a/46362272/175071
 * https://stackoverflow.com/questions/22360771/missing-recommended-library-libglu-so
